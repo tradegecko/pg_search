@@ -5,7 +5,6 @@ require "active_support/core_ext/string/strip"
 
 require "pg_search/compatibility"
 require "pg_search/configuration"
-require "pg_search/extensions/arel"
 require "pg_search/features"
 require "pg_search/multisearch"
 require "pg_search/multisearchable"
