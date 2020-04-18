@@ -14,6 +14,8 @@ require "pg_search/scope_options"
 require "pg_search/version"
 
 module PgSearch
+  autoload :Document, "pg_search/document"
+
   extend ActiveSupport::Concern
   include Compatibility::ActiveRecord3 if ActiveRecord::VERSION::MAJOR == 3
 
@@ -78,5 +80,4 @@ module PgSearch
   class NotSupportedForPostgresqlVersion < StandardError; end
 end
 
-require "pg_search/document"
 require "pg_search/railtie" if defined?(Rails)
